@@ -6,7 +6,11 @@ import { composeWithMongoose } from 'graphql-compose-mongoose';
 export const UserSchema = new Schema({
     uid: {type: String, required: true },
     displayName: {type: String, trim: true, required: true},
-    pat: {type: String, trim: true}
+    pat: {type: String, trim: true},
+    currOrganization: {type: String, trim: true},
+    currProject: {type: String, trim: true},
+    currTeam: {type: String, trim: true},
+    currRepository: { type: String, trim: true}
 },
 {
     collection: 'users'
